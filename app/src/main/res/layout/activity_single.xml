@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/background_book"
         android:layout_width="match_parent"
         android:layout_height="170dp"
-        android:background="#000">
+        android:background="#000000">
+
         <ImageView
             android:id="@+id/background_image_book"
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:src="@mipmap/flower"/>
+            android:src="@mipmap/flower" />
 
     </RelativeLayout>
 
@@ -35,40 +36,139 @@
 
     <LinearLayout
         android:id="@+id/background_profile_name"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_below="@id/background_image_profile"
+        android:orientation="vertical"
         android:padding="10dp">
 
         <TextView
             android:id="@+id/text_profile_name"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
+            android:text="Nguyễn Hồng Phong"
             android:textAlignment="center"
-            android:textSize="30dp"
-            android:textColor="#000000"
-            android:text="Nguyễn Hồng Phong"/>
+            android:textColor="#6a737b"
+            android:textSize="20dp" />
 
         <TextView
             android:id="@+id/text_edit_profile_name"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="20dp"
             android:layout_centerHorizontal="true"
+            android:text="Thêm tiểu sử tạm thời"
             android:textAlignment="center"
-            android:textSize="16dp"
             android:textColor="#db3552"
-            android:text="Thêm tiểu sử tạm thời"/>
+            android:textSize="10dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/background_edit_information_profile"
-        android:orientation="vertical"
+        android:id="@+id/background_information_profile"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_below="@+id/background_profile_name">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/background_profile_name"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/background_edit_infomation_profile"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp">
+
+            <RelativeLayout
+                android:id="@+id/background_edit_single_page"
+                android:layout_width="69dp"
+                android:layout_height="70dp">
+
+                <ImageView
+                    android:id="@+id/image_edit_single_page"
+                    android:layout_width="47dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/txt_edit_single_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_edit_single_page"
+                    android:text="Chỉ sửa trang cá nhân"
+                    android:textAlignment="center"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/background_more"
+                android:layout_width="69dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="84dp">
+
+                <ImageView
+                    android:id="@+id/image_view_more"
+                    android:layout_width="47dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/txt_view_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_more"
+                    android:text="Theme"
+                    android:textAlignment="center"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/background_view_information"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/background_view_button"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+            <TextView
+                android:id="@+id/txt_introduce"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:text="Giới Thiệu"/>
+
+            <TextView
+                android:id="@+id/txt_picture"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:text="Ảnh"/>
+
+            <TextView
+                android:id="@+id/txt_friend"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:padding="15dp"
+                android:textStyle="bold"
+                android:text="Bạn bè"/>
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
