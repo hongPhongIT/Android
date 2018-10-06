@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.time.Instant;
-
 public class LoginActivity extends Activity {
 
     EditText edtUser, edtPassword;
@@ -26,7 +24,7 @@ public class LoginActivity extends Activity {
         btnLogin = (Button) findViewById(R.id.button_login);
 
         if (checkLogin()){
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         }
@@ -39,7 +37,7 @@ public class LoginActivity extends Activity {
 
                 if (userName.equals("admin") && password.equals("12345")){
                     saveLogin();
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                     startActivity(intent);
                     Toast.makeText(LoginActivity.this, "login successfully",Toast.LENGTH_LONG).show();
                     finish();
